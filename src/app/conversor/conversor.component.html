@@ -1,0 +1,43 @@
+<body class="p-3 text-primary-emphasis bg-primary-subtle">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="text-center">
+                    <h1>Conversor de Real</h1><br>
+
+                    <b>Cotação Hoje:</b><br><br>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Dólar</span>
+                        <input type="number" class="form-control" [(ngModel)]="dolar" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Euro</span>
+                        <input type="number" class="form-control" [(ngModel)]="euro" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Libras</span>
+                        <input type="number" class="form-control" [(ngModel)]="libras" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div><br>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">R$</span>
+                        <input [(ngModel)]="real" type="number" class="form-control" placeholder="Valor em Reais:"
+                            aria-label="Digite o Valor:" aria-describedby="button-addon2" value="1.00">
+                        <button class="btn btn-secondary" type="button" id="button-addon2"
+                            (click)="Conversor()">Converter</button>
+                    </div>
+                </div>
+                <div
+                    class="card p-3 text-light-emphasis -emphasis bg-light-subtle border border-emphasis-subtle rounded-3">
+                    <div class="card-header text-center"><b>Valores:</b></div>
+                    <div class="card-body">
+                        <b class="card-text"><div style="white-space: pre-line">{{resultado}}</div></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
